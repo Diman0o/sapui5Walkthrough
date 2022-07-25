@@ -1,0 +1,155 @@
+{
+    "games": [
+        {
+            "id": 1,
+            "name": "Ведьмак 3: Дикая Охота",
+            "tagsId":[1, 3, 4, 7, 8],
+            "price": 1499,
+            "developerId": 2,
+            "releaseYear": 2015
+        },
+        {
+            "id": 2,
+            "name": "Minecraft",
+            "tagsId":[1, 4, 6, 8],
+            "price": 1299,
+            "developerId": 3,
+            "releaseYear": 2011
+        },
+        {
+            "id": 3,
+            "name": "Disco Elysium",
+            "tagsId":[1, 2, 3, 4, 5, 7],
+            "price": 699,
+            "developerId": 1,
+            "releaseYear": 2019
+        }
+    ],
+
+    "tags": [
+        {
+            "id": 1,
+            "name": "Открытый мир"
+        },
+        {
+            "id": 2,
+            "name": "Инди"
+        },
+        {
+            "id": 3,
+            "name": "Глубокий сюжет"
+        },
+        {
+            "id": 4,
+            "name": "Приключения"
+        },
+        {
+            "id": 5,
+            "name": "Point & Click"
+        },
+        {
+            "id": 6,
+            "name": "Симулятор"
+        },
+        {
+            "id": 7,
+            "name": "Ролевая игра"
+        },
+        {
+            "id": 8,
+            "name": "Экшен"
+        }
+    ],
+
+    "developers": [
+        {
+            "id": 1,
+            "name": "ZA/UM"
+        },
+        {
+            "id": 2,
+            "name": "CD Projekt RED"
+        },
+        {
+            "id": 3,
+            "name": "Mojang Studios"
+        }
+    ],
+
+    "users": [
+        {
+            "id": 1,
+            "login": "Sergay",
+            "passwordHash": "uyfgkHIGFlgTFDty"
+        },
+        {
+            "id": 2,
+            "login": "Buboner",
+            "passwordHash": "GVYuigfgiuhugyg"
+        },
+        {
+            "id": 3,
+            "login": "Biba",
+            "passwordHash": "GhuighyfyUYHW"
+        },
+        {
+            "id": 4,
+            "login": "Boba",
+            "passwordHash": "PJIgdyfeeRedpU"
+        }
+    ],
+
+    "reviews": [
+        {
+            "id": 1,
+            "userId": 1,
+            "gameId": 2,
+            "textReview": "Игра для школьников",
+            "rating": 2
+        },
+        {
+            "id": 2,
+            "userId": 4,
+            "gameId": 3,
+            "textReview": "Симулятор алкоголика",
+            "rating": 4
+        },
+        {
+            "id": 3,
+            "userId": 2,
+            "gameId": 2,
+            "textReview": "майнкрафт эта мая жизн",
+            "rating": 5
+        },
+        {
+            "id": 4,
+            "userId": 1,
+            "gameId": 1,
+            "textReview": "Лучше этой игры только партейка в гвинт",
+            "rating": 5
+        }
+    ],
+
+    "purchases": [
+        {
+            "userId": 1,
+            "gameId": 1
+        },
+        {
+            "userId": 4,
+            "gameId": 3
+        },
+        {
+            "userId": 1,
+            "gameId": 2
+        },
+        {
+            "userId": 2,
+            "gameId": 2
+        },
+        {
+            "userId": 4,
+            "gameId": 1
+        }
+    ]
+}
