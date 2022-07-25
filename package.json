@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@ui5/cli": "^2.14.9"
+  }
+}
