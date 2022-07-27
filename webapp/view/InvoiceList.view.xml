@@ -13,7 +13,7 @@
             path : 'ShipperName',
             group : true
         },
-        filters: [{path: 'Status', operator: 'Contains', value1: ''}]
+        filters: [{path: 'City', operator: 'EQ', value1: 'Berlin'}]
      }" >
       <headerToolbar>
         <Toolbar>
