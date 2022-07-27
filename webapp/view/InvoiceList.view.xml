@@ -4,9 +4,17 @@
    xmlns:mvc="sap.ui.core.mvc">
    <List
       headerText="{i18n>invoiceListTitle}"
+      id="invoiceList"
       class="sapUiResponsiveMargin"
       width="auto"
-      items="{invoice>/Invoices}" >
+      items="{path: 'invoice>/Invoices', filters: [{path: 'Status', operator: 'EQ', value1: 'A'}]}" >
+      <headerToolbar>
+        <Toolbar>
+           <Title text="{i18n>invoiceListTitle}"/>
+           <ToolbarSpacer/>
+           <SearchField width="50%" search=".onFilterInvoices"/>
+        </Toolbar>
+     </headerToolbar>
          <ObjectListItem
             title="{invoice>/Quality} {invoice>Quantity} x {invoice>ProductName}  {invoice>ExtendedPrice}" 
             icon="{path: 'invoice>Icon'}"
