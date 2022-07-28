@@ -14,7 +14,7 @@
             group : true
         },
         filters: [{path: 'City', operator: 'EQ', value1: 'Berlin'}]
-     }" >
+      }" >
       <headerToolbar>
         <Toolbar>
            <Title text="{i18n>invoiceListTitle}"/>

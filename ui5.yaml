@@ -1,7 +1,7 @@
-# https://s4hana.local.net:44300/sap/opu/odata/sap/ZSTUDENT_05_PLAY_STORE_SRV/?$format=xml
+# https://s4hana.local.net:44300/sap/opu/odata/sap/ZSTUDENT_05_PLAY_STORE_SRV
 specVersion: "2.4"
 metadata:
-  name: "sapui5walkthrough"
+  name: "sapui5Walkthrough"
 type: application
 server:
   customMiddleware:
@@ -10,8 +10,8 @@ server:
       configuration:
         ignoreCertError: true # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
         backend:
-          - path: /sap/opu/odata/sap/ZSTUDENT_05_PLAY_STORE_SRV
-            url: https://s4hana.local.net:44300
+          - path: /V2/Northwind #/sap/opu/odata/sap/ZSTUDENT_05_PLAY_STORE_SRV
+            url:  https://services.odata.org #https://s4hana.local.net:44300
         ui5:
           path:
             - /resources
