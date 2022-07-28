@@ -7,15 +7,15 @@ sap.ui.define([
 ], function (Controller, JSONModel, formatter, Filter, FilterOperator) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.walkthrough.controller.InvoiceList", {
+	return Controller.extend("sap.ui.demo.walkthrough.controller.gameList", {
         formatter: formatter,
 		onInit : function () {
 			var oViewModel = new JSONModel({
-				currency: "EUR"
+				currency: "RUB"
 			});
 			this.getView().setModel(oViewModel, "view");
 		},
-		onFilterInvoices : function (oEvent) {
+		onFilterGames : function (oEvent) {
 
 			// build filter array
 			var aFilter = [];
@@ -25,7 +25,7 @@ sap.ui.define([
 			}
 
 			// filter binding
-			var oList = this.byId("invoiceList");
+			var oList = this.byId("gameList");
 			var oBinding = oList.getBinding("items");
             var aDefaultFilters = oList.getBindingInfo("items").filters;
 			oBinding.filter(aFilter.concat(aDefaultFilters));

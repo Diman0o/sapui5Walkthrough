@@ -10,6 +10,13 @@
 			"version": "1.0.0"
 		},
 		"dataSources": {
+			"gameRemote": {
+				"uri": "/sap/opu/odata/sap/ZSTUDENT_05_PLAY_STORE_SRV",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			},
 			"invoiceRemote": {
 				"uri": "/V2/Northwind/Northwind.svc",
 				"type": "OData",
@@ -49,6 +56,12 @@
 						""
 					],
 					"fallbackLocale": ""
+				}
+			},
+			"game": {
+				"dataSource": "gameRemote",
+				"settings": {
+					"useBatch": false
 				}
 			},
 			"invoice": {

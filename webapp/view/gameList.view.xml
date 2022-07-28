@@ -1,0 +1,79 @@
+<mvc:View xmlns:internal="sap.landvisz.internal" xmlns:core="sap.ui.core"
+    controllerName="sap.ui.demo.walkthrough.controller.gameList"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <List
+      headerText="{i18n>gameListTitle}"
+      id="gameList"
+      class="sapUiResponsiveMargin"
+      width="auto"
+      items="{
+        path : 'game>/gameSet',
+        sorter : {
+            path : 'DeveloperId',
+            group : true
+        },
+        filters: [{path: 'GameName', operator: 'Contains', value1: ''}]
+      }" >
+      <headerToolbar>
+        <Toolbar>
+           <Title text="{i18n>gameListTitle}"/>
+           <ToolbarSpacer/>
+           <SearchField width="50%" search=".onFilterInvoices"/>
+        </Toolbar>
+     </headerToolbar>
+         <ObjectListItem
+            title="{game>GameName} {game>GamePrice} x {game>ReleaseYear}  {game>DeveloperId}" 
+            icon="sap-icon://accept">
+        </ObjectListItem>
+            <!-- numberUnit="{view>/currency}" -->
+
+
+   </List>
+   
+   <Table
+      headerText="{i18n>gameListTitle}"
+      id="gameTable"
+      class="sapUiResponsiveMargin"
+      width="auto"
+      items="{
+        path : 'game>/gameSet',
+        sorter : {
+            path : 'DeveloperId',
+            group : true
+        },
+        filters: [{path: 'GameName', operator: 'Contains', value1: ''}]
+      }" >
+      <headerToolbar>
+        <Toolbar>
+           <Title text="{i18n>gameListTitle}"/>
+           <ToolbarSpacer/>
+           <SearchField width="50%" search=".onFilterInvoices"/>
+        </Toolbar>
+     </headerToolbar>
+      <columns>
+        <Column >
+            <Label text="Name"/>
+        </Column>
+        <Column >
+            <Label text="ReleaseYear"/>
+        </Column>
+        <Column >
+            <Label text="Price"/>
+        </Column>
+      </columns>
+      
+      <items>
+        <ColumnListItem >
+            <cells>
+                <HBox>
+                    <core:Icon class="sapUiSmallMarginEnd" src="sap-icon://accept"></core:Icon>
+                    <Text text=' {game>GameName}'></Text>
+                </HBox>
+                <Text text='{game>ReleaseYear}'></Text>
+                <Text text='{game>GamePrice}'></Text>
+            </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
+</mvc:View>
