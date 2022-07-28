@@ -90,6 +90,11 @@
 			  "pattern": "/{gamePath}",
 			  "name": "detail",
 			  "target": "detail"
+			},
+			{
+			  "pattern": "/layout",
+			  "name": "layout",
+			  "target": "layout"
 			}
 		  ],
 		  "targets": {
@@ -100,6 +105,10 @@
 			"detail": {
 			  "id": "detail",
 			  "name": "Detail"
+			},
+			"layout": {
+			  "id": "layout",
+			  "name": "Layout"
 			}
 		  }
 		},

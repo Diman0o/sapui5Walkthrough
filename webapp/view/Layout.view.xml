@@ -1,0 +1,7 @@
+<mvc:View controllerName="sap.ui.demo.walkthrough.controller.Layout" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m" xmlns:f="sap.f" xmlns:l="sap.ui.layout">
+    <Text text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur suscipit, animi rerum iusto incidunt corrupti doloribus amet sequi et assumenda, odio fugit nam expedita impedit ullam! Ex, suscipit aut!"></Text>
+
+    <l:Grid>
+        <Text text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur suscipit, animi rerum iusto incidunt corrupti doloribus amet sequi et assumenda, odio fugit nam expedita impedit ullam! Ex, suscipit aut!"></Text>
+    </l:Grid>
+</mvc:View>

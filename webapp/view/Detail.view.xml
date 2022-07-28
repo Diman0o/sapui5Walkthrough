@@ -7,7 +7,7 @@ controllerName="sap.ui.demo.walkthrough.controller.Detail"
         showNavButton="true"
 		navButtonPress=".onNavBack">
 		<ObjectHeader
-        intro="{game>Developer2Game/1}"
+        intro="{game>Developer2Game}"
         title="{game>GameName}"/>
 	</Page>
 </mvc:View>
