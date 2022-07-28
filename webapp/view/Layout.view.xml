@@ -1,5 +1,29 @@
 <mvc:View controllerName="sap.ui.demo.walkthrough.controller.Layout" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m" xmlns:f="sap.f" xmlns:l="sap.ui.layout">
-    <l:Grid>
-        <Text text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur suscipit, animi rerum iusto incidunt corrupti doloribus amet sequi et assumenda, odio fugit nam expedita impedit ullam! Ex, suscipit aut!"></Text>
+    <l:Grid defaultSpan="XL2 M2 S4" class="sapUiSmallMargin">
+        <Text text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur suscipit, animi rerum iusto incidunt corrupti doloribus amet sequi et assumenda, odio fugit nam expedita impedit ullam! Ex, suscipit aut!" >
+            <layoutData>
+                <l:GridData span="XL4 M6 S8" />
+            </layoutData>
+        </Text>
+        <Button text="Главная" type="Emphasized" width="100%">
+            <layoutData>
+                <l:GridData span="XL3 M5 S12" indent="XL5 M1" linebreakS="true"/>
+            </layoutData>
+        </Button>
+        <Button text="Первая" type="Emphasized" width="100%" >
+            <layoutData>
+                <l:GridData indent="M6" linebreak="true"/>
+            </layoutData>
+        </Button>
+        <Button text="Вторая" type="Emphasized" width="100%">
+            <layoutData>
+                <l:GridData span="XL3" linebreakS="true"/>
+            </layoutData>
+        </Button>
+        <Button text="Третья" type="Emphasized" width="100%">
+            <layoutData>
+                <l:GridData linebreakS="true"/>
+            </layoutData>
+        </Button>
     </l:Grid>
 </mvc:View>
