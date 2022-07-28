@@ -18,7 +18,11 @@ sap.ui.define([
             }
          };
          var oModel = new JSONModel(oData);
+         oModel.setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
          this.setModel(oModel);
+
+         // create the views based on the url/hash
+			this.getRouter().initialize();
       }
    });
 });

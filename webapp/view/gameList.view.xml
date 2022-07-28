@@ -19,12 +19,14 @@
         <Toolbar>
            <Title text="{i18n>gameListTitle}"/>
            <ToolbarSpacer/>
-           <SearchField width="50%" search=".onFilterInvoices"/>
+           <SearchField width="50%" search=".onFilterGames"/>
         </Toolbar>
      </headerToolbar>
          <ObjectListItem
             title="{game>GameName} {game>GamePrice} x {game>ReleaseYear}  {game>DeveloperId}" 
-            icon="sap-icon://accept">
+            icon="sap-icon://accept"
+            type="Navigation"
+					  press="onPress">
         </ObjectListItem>
             <!-- numberUnit="{view>/currency}" -->
 
@@ -42,13 +44,13 @@
             path : 'DeveloperId',
             group : true
         },
-        filters: [{path: 'GameName', operator: 'Contains', value1: ''}]
+        filters: [{path: 'GameName', operator: 'EQ', value1: 'Ведьмак 3: Дикая Охота'}]
       }" >
       <headerToolbar>
         <Toolbar>
            <Title text="{i18n>gameListTitle}"/>
            <ToolbarSpacer/>
-           <SearchField width="50%" search=".onFilterInvoices"/>
+           <SearchField width="50%" search=".onFilterGames"/>
         </Toolbar>
      </headerToolbar>
       <columns>

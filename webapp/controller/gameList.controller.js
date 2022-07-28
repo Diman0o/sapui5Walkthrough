@@ -29,6 +29,13 @@ sap.ui.define([
 			var oBinding = oList.getBinding("items");
             var aDefaultFilters = oList.getBindingInfo("items").filters;
 			oBinding.filter(aFilter.concat(aDefaultFilters));
+		},
+		onPress: function (oEvent) {
+			var oItem = oEvent.getSource();
+			var oRouter = this.getOwnerComponent().getRouter();
+			oRouter.navTo("detail", {
+				gamePath: window.encodeURIComponent(oItem.getBindingContext("game").getPath().substr(1))
+			});
 		}
 
 	});
