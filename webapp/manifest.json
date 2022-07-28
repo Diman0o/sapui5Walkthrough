@@ -87,7 +87,7 @@
 			  "target": "overview"
 			},
 			{
-			  "pattern": "/{gamePath}",
+			  "pattern": "details/{gamePath}",
 			  "name": "detail",
 			  "target": "detail"
 			},
