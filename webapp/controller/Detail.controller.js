@@ -34,7 +34,7 @@ sap.ui.define([
 				path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").gamePath),
 				model: "game",
                 parameters: {
-                    expand: "Developer2Game"
+                    expand: "Game2Developer"
                 }
 			});
 		},
