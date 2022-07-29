@@ -1,0 +1,99 @@
+<mvc:View
+		controllerName="sap.ui.demo.walkthrough.controller.Detail"
+		height="100%"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:core="sap.ui.core"
+		xmlns:layout="sap.ui.layout"
+		xmlns="sap.m"
+		xmlns:f="sap.f"
+		xmlns:fb="sap.ui.comp.filterbar"
+		xmlns:vm="sap.ui.comp.variants">
+		<f:DynamicPage id="dynamicPageId" headerExpanded="{game>/gameSet}">
+			<!-- DynamicPage Title -->
+			<f:title>
+				<f:DynamicPageTitle>
+					<f:heading>
+						<vm:VariantManagement standardItemText="My Products">
+						</vm:VariantManagement>
+					</f:heading>
+					<f:actions>
+						<ToolbarSpacer/>
+						<Button
+								text="Global Action"
+								type="Transparent"/>
+						<Button
+								text="Toggle Footer"
+								type="Transparent"
+								press="onToggleFooter"/>
+						<Button
+								icon="sap-icon://action"
+								type="Transparent"/>
+					</f:actions>
+				</f:DynamicPageTitle>
+			</f:title>
+			<!-- DynamicPage Header -->
+			<f:header>
+				<f:DynamicPageHeader pinnable="true">
+					<f:content>
+						<fb:FilterBar id="filterbar" reset="onReset" search="onSearch" useToolbar="false" showGoOnFB="false">
+							<fb:filterItems>
+								<fb:FilterItem name="A" label="Name">
+									<fb:control>
+										<Select
+										id="slName"
+										forceSelection="true"
+										change="onSelectChange"
+										items="{
+                                                    path: 'game>/gameSet'
+                                                }">
+										<core:Item key="{key}" text="{name}"/>
+										</Select>
+									</fb:control>				
+								</fb:FilterItem>								
+								<fb:FilterItem name="B" label="Category">
+									<fb:control>
+										<Select
+										id="slCategory"
+										change="onSelectChange"
+										forceSelection="true"
+										items="{
+                                                    path: 'game>/gameSet'
+                                                 }">
+										<core:Item key="{key}" text="{name}"/>
+										</Select>
+									</fb:control>				
+								</fb:FilterItem>				
+								<fb:FilterItem name="C" label="SupplierName">
+									<fb:control>
+										<Select
+										id="slSupplierName"
+										change="onSelectChange"
+										forceSelection="true"
+										items="{
+                                                    path: 'game>/gameSet'
+                                                }">
+										<core:Item key="{key}" text="{name}"/>
+										</Select>
+									</fb:control>				
+								</fb:FilterItem>
+							</fb:filterItems>
+						</fb:FilterBar>
+					</f:content>
+				</f:DynamicPageHeader>
+			</f:header>
+
+			<!-- DynamicPage Content -->
+			<f:content>
+				<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.gameList"/>
+			</f:content>
+
+			<!-- DynamicPage Footer -->
+			<f:footer>
+				<OverflowToolbar>
+					<ToolbarSpacer/>
+					<Button type="Accept" text="Accept"/>
+					<Button type="Reject" text="Reject"/>
+				</OverflowToolbar>
+			</f:footer>
+		</f:DynamicPage>
+</mvc:View>

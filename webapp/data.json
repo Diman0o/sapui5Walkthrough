@@ -1,30 +1,35 @@
 {
-    "games": [
-        {
+    "value": 3,
+    "games": {
+        "value": 2,
+        "1": {
             "id": 1,
             "name": "Ведьмак 3: Дикая Охота",
             "tagsId":[1, 3, 4, 7, 8],
             "price": 1499,
             "developerId": 2,
-            "releaseYear": 2015
+            "releaseYear": 2015,
+            "rating": 4
         },
-        {
+        "2": {
             "id": 2,
             "name": "Minecraft",
             "tagsId":[1, 4, 6, 8],
             "price": 1299,
             "developerId": 3,
-            "releaseYear": 2011
+            "releaseYear": 2011,
+            "rating": 3
         },
-        {
+        "3": {
             "id": 3,
             "name": "Disco Elysium",
             "tagsId":[1, 2, 3, 4, 5, 7],
             "price": 699,
             "developerId": 1,
-            "releaseYear": 2019
+            "releaseYear": 2019,
+            "rating": 5
         }
-    ],
+    },
 
     "tags": [
         {
@@ -152,4 +157,5 @@
             "gameId": 1
         }
     ]
+
 }

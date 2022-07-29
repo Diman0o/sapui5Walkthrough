@@ -1,34 +1,28 @@
-<mvc:View xmlns:internal="sap.landvisz.internal" xmlns:core="sap.ui.core"
-    controllerName="sap.ui.demo.walkthrough.controller.gameList"
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-   <List
-      headerText="{i18n>gameListTitle}"
-      id="gameList"
-      class="sapUiResponsiveMargin"
-      width="auto"
-      items="{
+<mvc:View xmlns:internal="sap.landvisz.internal" xmlns:core="sap.ui.core" controllerName="sap.ui.demo.walkthrough.controller.gameList" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+   <List headerText="{i18n>gameListTitle}" id="gameList" class="sapUiResponsiveMargin" width="auto" items="{
         path : 'game>/gameSet',
         sorter : {
-            path : 'DeveloperId',
+            path : 'ReleaseYear',
             group : true
         },
         filters: [{path: 'GameName', operator: 'Contains', value1: ''}]
-      }" >
+      }">
       <headerToolbar>
-        <Toolbar>
-           <Title text="{i18n>gameListTitle}"/>
-           <ToolbarSpacer/>
-           <SearchField width="50%" search=".onFilterGames"/>
-        </Toolbar>
-     </headerToolbar>
-         <ObjectListItem
-            title="{game>GameName} {game>GamePrice} x {game>ReleaseYear}  {game>DeveloperId}" 
-            icon="sap-icon://accept"
-            type="Navigation"
-					  press="onPress">
-        </ObjectListItem>
-            <!-- numberUnit="{view>/currency}" -->
+         <Toolbar>
+            <Title text="{i18n>gameListTitle}" />
+            <ToolbarSpacer />
+            <SearchField width="50%" search=".onFilterGames" />
+         </Toolbar>
+      </headerToolbar>
+      <ObjectListItem title="{game>GameName} {game>GamePrice}" icon="sap-icon://accept" type="Navigation" press="onPress" 
+         number="{
+                  parts: [{path: 'game>GamePrice'}, {path: 'view>/currency'}],
+                  type: 'sap.ui.model.type.Currency',
+                  formatOptions: {
+                     showMeasure: false
+                  }
+               }" numberUnit="{view>/currency}"></ObjectListItem>
+      <!-- numberUnit="{view>/currency}" -->
 
 
    </List>

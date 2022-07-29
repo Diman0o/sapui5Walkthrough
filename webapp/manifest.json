@@ -69,7 +69,11 @@
 				"settings": {
 					"useBatch": false
 				}
-			}
+			},
+			"data": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "data.json"
+			  }
 		},
 		"routing": {
 		  "config": {

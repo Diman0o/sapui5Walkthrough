@@ -27,6 +27,8 @@ sap.ui.define([
 			this.getView().setModel(oModel, "view");
 			var oRouter = this.getOwnerComponent().getRouter();
 			oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
+			var oImgModel = new JSONModel(sap.ui.require.toUrl("sap/ui/demo/mock/img.json"));
+			this.getView().setModel(oImgModel, "img");
 		},
 		_onObjectMatched: function (oEvent) {
 			this.byId("rating").reset();
@@ -36,6 +38,10 @@ sap.ui.define([
                 parameters: {
                     expand: "Game2Developer"
                 }
+			});
+			this.getView().bindElement({
+				path: "/games/" + window.decodeURIComponent(oEvent.getParameter("arguments").gamePath.match(/\d+/)[0]),
+				model: "data"
 			});
 		},
 

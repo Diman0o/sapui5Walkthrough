@@ -11,9 +11,11 @@ controllerName="sap.ui.demo.walkthrough.controller.Detail"
         intro="{game>Game2Developer/DeveloperName}"
         title="{game>GameName}"/>
 
-		<HBox items="{path : 'view>/boxes'}">
-			<wt:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" />
-		</HBox>
-		
+			<wt:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange" value="{data>rating}"/>
+
+		<Carousel height="300px" width="400px" class="sapUiContentPadding" loop="true">
+			<Image src="/images/game{game>GameId}/1.jpg" alt="Example picture of speakers" />
+			<Image src="/images/game{game>GameId}/2.jpg" alt="Example picture of USB flash drive" />
+		</Carousel>
 	</Page>
 </mvc:View>
