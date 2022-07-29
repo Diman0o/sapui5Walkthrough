@@ -8,7 +8,7 @@ controllerName="sap.ui.demo.walkthrough.controller.Detail"
         showNavButton="true"
 		navButtonPress=".onNavBack">
 		<ObjectHeader
-        intro="{game>Game2Developer}"
+        intro="{game>Game2Developer/DeveloperName}"
         title="{game>GameName}"/>
 
 		<HBox items="{path : 'view>/boxes'}">
